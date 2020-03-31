@@ -1,0 +1,164 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+
+DB_BOO_OriginSkills("Dome_CircleOfProtection");
+DB_BOO_OriginSkills("Shout_BreakTheShackles");
+DB_BOO_OriginSkills("Target_TimeWarp");
+DB_BOO_OriginSkills("Target_Squall");
+DB_BOO_OriginSkills("Target_MaddeningSong");
+DB_BOO_OriginSkills("Target_DemonicStare");
+DB_BOO_OriginSkills("Summon_SoulWolf");
+
+DB_BOO_RacialSkills("Shout_FleshSacrifice");
+DB_BOO_RacialSkills("Shout_InspireStart");
+DB_BOO_RacialSkills("Shout_PlayDead");
+DB_BOO_RacialSkills("Cone_Flamebreath");
+DB_BOO_RacialSkills("Target_PetrifyingTouch");
+
+KBSECTION
+
+// Give the characters the book
+
+IF
+GameStarted(_Region, _)
+AND
+IsGameLevel(_Region, 1)
+AND
+DB_IsPlayer(_Char)
+AND
+ItemTemplateIsInCharacterInventory(_Char, "BOOK_BOO_BookOfOrigins_26a03372-4c59-4903-8c63-3318fdaaccf3", 0)
+THEN
+ItemTemplateAddTo("BOOK_BOO_BookOfOrigins_26a03372-4c59-4903-8c63-3318fdaaccf3", _Char, 1);
+
+IF
+CharacterJoinedParty(_Char)
+AND
+DB_IsPlayer(_Char)
+AND
+ItemTemplateIsInCharacterInventory(_Char, "BOOK_BOO_BookOfOrigins_26a03372-4c59-4903-8c63-3318fdaaccf3", 0)
+THEN
+ItemTemplateAddTo("BOOK_BOO_BookOfOrigins_26a03372-4c59-4903-8c63-3318fdaaccf3", _Char, 1);
+
+// Using book
+
+IF
+CharacterUsedItem(_Char, _Item)
+AND
+DB_IsPlayer(_Char)
+AND
+GetTemplate(_Item, "BOOK_BOO_BookOfOrigins_26a03372-4c59-4903-8c63-3318fdaaccf3")
+AND
+QRY_SpeakerIsAvailable(_Char)
+THEN
+Proc_StartDialog(0, "BOO_BookOfOrigins_Dialog", _Char);
+
+// 
+
+PROC
+BOO_RemoveOriginSkills((CHARACTERGUID)_Char)
+AND
+DB_BOO_OriginSkills(_Skill)
+THEN
+CharacterRemoveSkill(_Char, _Skill);
+
+PROC
+BOO_RemoveRacialSkills((CHARACTERGUID)_Char)
+AND
+DB_BOO_RacialSkills(_Skill)
+THEN
+CharacterRemoveSkill(_Char, _Skill);
+
+// Change the Origin skills
+
+IF
+ObjectFlagSet("BOO_BookOfOrigins_DomeOfProtection", (CHARACTERGUID)_Char, _)
+THEN
+BOO_RemoveOriginSkills(_Char);
+CharacterAddSkill(_Char, "Dome_CircleOfProtection", 0);
+ObjectClearFlag(_Char, "BOO_BookOfOrigins_DomeOfProtection");
+
+IF
+ObjectFlagSet("BOO_BookOfOrigins_BreakTheShackles", (CHARACTERGUID)_Char, _)
+THEN
+BOO_RemoveOriginSkills(_Char);
+CharacterAddSkill(_Char, "Shout_BreakTheShackles", 0);
+ObjectClearFlag(_Char, "BOO_BookOfOrigins_BreakTheShackles");
+
+IF
+ObjectFlagSet("BOO_BookOfOrigins_TimeWarp", (CHARACTERGUID)_Char, _)
+THEN
+BOO_RemoveOriginSkills(_Char);
+CharacterAddSkill(_Char, "Target_TimeWarp", 0);
+ObjectClearFlag(_Char, "BOO_BookOfOrigins_TimeWarp");
+
+IF
+ObjectFlagSet("BOO_BookOfOrigins_BlindingSquall", (CHARACTERGUID)_Char, _)
+THEN
+BOO_RemoveOriginSkills(_Char);
+CharacterAddSkill(_Char, "Target_Squall", 0);
+ObjectClearFlag(_Char, "BOO_BookOfOrigins_BlindingSquall");
+
+IF
+ObjectFlagSet("BOO_BookOfOrigins_MaddeningSong", (CHARACTERGUID)_Char, _)
+THEN
+BOO_RemoveOriginSkills(_Char);
+CharacterAddSkill(_Char, "Target_MaddeningSong", 0);
+ObjectClearFlag(_Char, "BOO_BookOfOrigins_MaddeningSong");
+
+IF
+ObjectFlagSet("BOO_BookOfOrigins_DemonicStare", (CHARACTERGUID)_Char, _)
+THEN
+BOO_RemoveOriginSkills(_Char);
+CharacterAddSkill(_Char, "Target_DemonicStare", 0);
+ObjectClearFlag(_Char, "BOO_BookOfOrigins_DemonicStare");
+
+IF
+ObjectFlagSet("BOO_BookOfOrigins_SoulWolf", (CHARACTERGUID)_Char, _)
+THEN
+BOO_RemoveOriginSkills(_Char);
+CharacterAddSkill(_Char, "Summon_SoulWolf", 0);
+ObjectClearFlag(_Char, "BOO_BookOfOrigins_SoulWolf");
+
+// Change racial skills
+
+IF
+ObjectFlagSet("BOO_BookOfOrigins_FleshSacrifice", (CHARACTERGUID)_Char, _)
+THEN
+BOO_RemoveRacialSkills(_Char);
+CharacterAddSkill(_Char, "Shout_FleshSacrifice", 0);
+ObjectClearFlag(_Char, "BOO_BookOfOrigins_FleshSacrifice");
+
+IF
+ObjectFlagSet("BOO_BookOfOrigins_Encourage", (CHARACTERGUID)_Char, _)
+THEN
+BOO_RemoveRacialSkills(_Char);
+CharacterAddSkill(_Char, "Shout_InspireStart", 0);
+ObjectClearFlag(_Char, "BOO_BookOfOrigins_Encourage");
+
+IF
+ObjectFlagSet("BOO_BookOfOrigins_DragonsBlaze", (CHARACTERGUID)_Char, _)
+THEN
+BOO_RemoveRacialSkills(_Char);
+CharacterAddSkill(_Char, "Cone_Flamebreath", 0);
+ObjectClearFlag(_Char, "BOO_BookOfOrigins_DragonsBlaze");
+
+IF
+ObjectFlagSet("BOO_BookOfOrigins_PetrifyingTouch", (CHARACTERGUID)_Char, _)
+THEN
+BOO_RemoveRacialSkills(_Char);
+CharacterAddSkill(_Char, "Target_PetrifyingTouch", 0);
+ObjectClearFlag(_Char, "BOO_BookOfOrigins_PetrifyingTouch");
+
+IF
+ObjectFlagSet("BOO_BookOfOrigins_PlayDead", (CHARACTERGUID)_Char, _)
+THEN
+BOO_RemoveRacialSkills(_Char);
+CharacterAddSkill(_Char, "Shout_PlayDead", 0);
+ObjectClearFlag(_Char, "BOO_BookOfOrigins_PlayDead");
+
+
+EXITSECTION
+
+ENDEXITSECTION
+ParentTargetEdge "__Start"

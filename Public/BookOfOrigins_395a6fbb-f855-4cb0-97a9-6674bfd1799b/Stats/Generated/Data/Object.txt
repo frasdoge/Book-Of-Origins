@@ -1,0 +1,9 @@
+new entry "BOOK_BOO_BookOfOrigins"
+type "Object"
+data "RootTemplate" "26a03372-4c59-4903-8c63-3318fdaaccf3"
+data "Act" "1"
+data "UseAPCost" "0"
+data "Value" "0"
+data "Weight" "0"
+data "Unique" "1"
+
