@@ -1,23 +1,23 @@
 <contentList>
-	<content contentuid="h260fdb55g52f3g40cbg8784g82be116bd64c" Source="BOO_BookOfOrigins_Dialog.lsj">You now recall your heritage. You are of...</content>
-	<content contentuid="h46c8c094g4917g44b2ga505g7252c4be5487" Source="BOO_BookOfOrigins_Dialog.lsj">Hmm. You seem to have forgotten your heritage.</content>
-	<content contentuid="h6d6ba4f0gbaecg4dc2g8c0ag296892624e8a" Source="BOO_BookOfOrigins_Dialog.lsj">You suddenly remember your origins. You were...</content>
-	<content contentuid="h2d99979bgab25g414bg9f2cg9cb3cb57d1e4" Source="BOO_BookOfOrigins_Dialog.lsj">Human descent. &lt;i&gt;(Encourage)&lt;/i&gt;</content>
-	<content contentuid="hbd76d0bfg5669g4d09g802cgaba0b159e063" Source="BOO_BookOfOrigins_Dialog.lsj">Lizard-kin descent.&lt;i&gt; (Dragon&apos;s Blaze)&lt;/i&gt;</content>
-	<content contentuid="hcbf794f0g8b24g4b9eg84ccgec63997e03f0" Source="BOO_BookOfOrigins_Dialog.lsj">A master of manipulating time. &lt;i&gt;(Time Warp)&lt;/i&gt;</content>
-	<content contentuid="hde23477dg6beeg4555ga216g4cec678e35fe" Source="BOO_BookOfOrigins_Dialog.lsj">A master of a great wolf. &lt;i&gt;(Summon Soul Wolf)&lt;/i&gt;</content>
-	<content contentuid="h6c023c14gac2fg4320gb7c5g2828cd67da55" Source="BOO_BookOfOrigins_Dialog.lsj">A bard with the voice of a demon. &lt;i&gt;(Maddening Song)&lt;/i&gt;</content>
-	<content contentuid="h6005678cg5e13g40eag8585g0106c9400661" Source="BOO_BookOfOrigins_Dialog.lsj">Someone with the piercing eyes of a demon. &lt;i&gt;(Demonic Stare)&lt;/i&gt;</content>
-	<content contentuid="hdd5dd74agb372g4d32g9276gf605c9f4d16d" Source="BOO_BookOfOrigins_Dialog.lsj">Elven descent. &lt;i&gt;(Flesh Sacrifice)&lt;/i&gt;</content>
-	<content contentuid="hffe697e4g9b02g45c0g8732gf92489e05976" Source="BOO_BookOfOrigins_Dialog.lsj">Strange descent. &lt;i&gt;(Play Dead)&lt;/i&gt;</content>
-	<content contentuid="h5ab71b5cg25c1g4426ga953g91584d64120d" Source="BOO_BookOfOrigins_Dialog.lsj">Your origins and heritage have once again solidified in your mind.</content>
-	<content contentuid="h53229adbg0b88g4890g8bdega3050787337b" Source="BOO_BookOfOrigins_Dialog.lsj">A great presence in the storm. &lt;i&gt;(Blinding Squall)&lt;/i&gt;</content>
-	<content contentuid="h02a2d549ge626g4fc9g8290g20318d145a6c" Source="BOO_BookOfOrigins_Dialog.lsj">Hmm. You&apos;ve forgotten your origins actually.</content>
-	<content contentuid="hb04fdbf3g44c1g407cga293g428693905000" Source="BOO_BookOfOrigins_Dialog.lsj">A defender of the weak. &lt;i&gt;(Dome of Protection)&lt;/i&gt;</content>
-	<content contentuid="h69bc41c7ga800g4d1fgb20bg23ba44d44b64" Source="BOO_BookOfOrigins_Dialog.lsj">Dwarven descent. &lt;i&gt;(Petrifying Touch)&lt;/i&gt;</content>
-	<content contentuid="h59d3c53egb9e0g4fbcgb908ge936f1adbc54" Source="BOO_BookOfOrigins_Dialog.lsj">Someone who could not be shackled. &lt;i&gt;(Break the Shackles)&lt;/i&gt;</content>
-	<content contentuid="h0380055dg8534g46ecga09fgbe08c34aaff7" Source="BOOK_BOO_BookOfOrigins">A tome with mystical properties. Those who read it seem to remember their past quite vividly.</content>
-	<content contentuid="hb258be75g3f36g47eega17ege37bb46a7b7a" Source="BOOK_BOO_BookOfOrigins">Book of Origins</content>
-	<content contentuid="h2588ce8bgd9abg4a99ga06fga29cc4ccd53c" Source="BOOK_BOO_BookOfOrigins">Read</content>
-	<content contentuid="he269210dg8d16g4f1dg93e4g82940cfd66a9" Source="Summon_DisplayName.lsb" Key="Summon_SoulWolf_DisplayName">Summon Soul Wolf</content>
+	<content contentuid="h260fdb55g52f3g40cbg8784g82be116bd64c" Source="BOO_BookOfOrigins_Dialog.lsj">あなたの血に眠る力を呼び覚まそうとしている。あなたは…</content>
+	<content contentuid="h46c8c094g4917g44b2ga505g7252c4be5487" Source="BOO_BookOfOrigins_Dialog.lsj">あなたの血の力は再び眠りについた…</content>
+	<content contentuid="h6d6ba4f0gbaecg4dc2g8c0ag296892624e8a" Source="BOO_BookOfOrigins_Dialog.lsj">不意にあなたの原初の記憶が蘇った。 あなたは…</content>
+	<content contentuid="h2d99979bgab25g414bg9f2cg9cb3cb57d1e4" Source="BOO_BookOfOrigins_Dialog.lsj">人間の血の記憶 &lt;i&gt;(エンカレッジ)&lt;/i&gt;</content>
+	<content contentuid="hbd76d0bfg5669g4d09g802cgaba0b159e063" Source="BOO_BookOfOrigins_Dialog.lsj">リザードマンの血の記憶 &lt;i&gt; (ドラゴン&apos;ブレイズ)&lt;/i&gt;</content>
+	<content contentuid="hcbf794f0g8b24g4b9eg84ccgec63997e03f0" Source="BOO_BookOfOrigins_Dialog.lsj">時の支配者 &lt;i&gt;(タイムワープ)&lt;/i&gt;</content>
+	<content contentuid="hde23477dg6beeg4555ga216g4cec678e35fe" Source="BOO_BookOfOrigins_Dialog.lsj">巨狼の主 &lt;i&gt;(ソウルウルフ召喚)&lt;/i&gt;</content>
+	<content contentuid="h6c023c14gac2fg4320gb7c5g2828cd67da55" Source="BOO_BookOfOrigins_Dialog.lsj">魔性の吟遊詩人 &lt;i&gt;(狂乱の歌声)&lt;/i&gt;</content>
+	<content contentuid="h6005678cg5e13g40eag8585g0106c9400661" Source="BOO_BookOfOrigins_Dialog.lsj">魔眼を持つ者 &lt;i&gt;(魔の視線)&lt;/i&gt;</content>
+	<content contentuid="hdd5dd74agb372g4d32g9276gf605c9f4d16d" Source="BOO_BookOfOrigins_Dialog.lsj">エルフの血の記憶 &lt;i&gt;(フレッシュ・サクリファイス)&lt;/i&gt;</content>
+	<content contentuid="hffe697e4g9b02g45c0g8732gf92489e05976" Source="BOO_BookOfOrigins_Dialog.lsj">古代の血の記憶 &lt;i&gt;(死んだふり)&lt;/i&gt;</content>
+	<content contentuid="h5ab71b5cg25c1g4426ga953g91584d64120d" Source="BOO_BookOfOrigins_Dialog.lsj">血と魂の記憶が、あなたの中で再び形を成します</content>
+	<content contentuid="h53229adbg0b88g4890g8bdega3050787337b" Source="BOO_BookOfOrigins_Dialog.lsj">嵐を呼ぶ者 &lt;i&gt;(盲目の嵐)&lt;/i&gt;</content>
+	<content contentuid="h02a2d549ge626g4fc9g8290g20318d145a6c" Source="BOO_BookOfOrigins_Dialog.lsj">あなたは原初の記憶を封印した…</content>
+	<content contentuid="hb04fdbf3g44c1g407cga293g428693905000" Source="BOO_BookOfOrigins_Dialog.lsj">弱き者の守護者 &lt;i&gt;(ドーム・オブ・プロテクション)&lt;/i&gt;</content>
+	<content contentuid="h69bc41c7ga800g4d1fgb20bg23ba44d44b64" Source="BOO_BookOfOrigins_Dialog.lsj">ドワーフの血の記憶 &lt;i&gt;(石化の指先)&lt;/i&gt;</content>
+	<content contentuid="h59d3c53egb9e0g4fbcgb908ge936f1adbc54" Source="BOO_BookOfOrigins_Dialog.lsj">縛られぬ魂を持つ者 &lt;i&gt;(束縛の破壊)&lt;/i&gt;</content>
+	<content contentuid="h0380055dg8534g46ecga09fgbe08c34aaff7" Source="BOOK_BOO_BookOfOrigins">神秘的な特性を持つ本です。 読んだ者は自分の過去を鮮明に思い出す事が出来るようだ…</content>
+	<content contentuid="hb258be75g3f36g47eega17ege37bb46a7b7a" Source="BOOK_BOO_BookOfOrigins">根源の書</content>
+	<content contentuid="h2588ce8bgd9abg4a99ga06fga29cc4ccd53c" Source="BOOK_BOO_BookOfOrigins">読む</content>
+	<content contentuid="he269210dg8d16g4f1dg93e4g82940cfd66a9" Source="Summon_DisplayName.lsb" Key="Summon_SoulWolf_DisplayName">ソウルウルフ召喚</content>
 </contentList>
