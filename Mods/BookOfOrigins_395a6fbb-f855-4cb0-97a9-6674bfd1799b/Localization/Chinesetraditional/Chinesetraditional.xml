@@ -5,7 +5,7 @@
 	<content contentuid="h2d99979bgab25g414bg9f2cg9cb3cb57d1e4" Source="BOO_BookOfOrigins_Dialog.lsj">人類之血脈。 &lt;i&gt;(鼓舞人心)&lt;/i&gt;</content>
 	<content contentuid="hbd76d0bfg5669g4d09g802cgaba0b159e063" Source="BOO_BookOfOrigins_Dialog.lsj">蜥蜴人之血脈。&lt;i&gt; (龍之吐息)&lt;/i&gt;</content>
 	<content contentuid="hcbf794f0g8b24g4b9eg84ccgec63997e03f0" Source="BOO_BookOfOrigins_Dialog.lsj">時間的支配者。 &lt;i&gt;(時間扭曲)&lt;/i&gt;</content>
-	<content contentuid="hde23477dg6beeg4555ga216g4cec678e35fe" Source="BOO_BookOfOrigins_Dialog.lsj">巨狼之主。 &lt;i&gt;(召喚伊凡的靈狼)&lt;/i&gt;</content>
+	<content contentuid="hde23477dg6beeg4555ga216g4cec678e35fe" Source="BOO_BookOfOrigins_Dialog.lsj">巨狼之主。 &lt;i&gt;(召喚靈狼)&lt;/i&gt;</content>
 	<content contentuid="h6c023c14gac2fg4320gb7c5g2828cd67da55" Source="BOO_BookOfOrigins_Dialog.lsj">與惡魔共舞的吟游詩人。 &lt;i&gt;(狂亂之歌)&lt;/i&gt;</content>
 	<content contentuid="h6005678cg5e13g40eag8585g0106c9400661" Source="BOO_BookOfOrigins_Dialog.lsj">魔眼持有者。 &lt;i&gt;(惡魔凝視)&lt;/i&gt;</content>
 	<content contentuid="hdd5dd74agb372g4d32g9276gf605c9f4d16d" Source="BOO_BookOfOrigins_Dialog.lsj">精靈之血脈。 &lt;i&gt;(肉身獻祭)&lt;/i&gt;</content>
@@ -19,5 +19,5 @@
 	<content contentuid="h0380055dg8534g46ecga09fgbe08c34aaff7" Source="BOOK_BOO_BookOfOrigins">一本神秘的書籍。 能閱讀它之人似乎會憶起被塵封的過去...</content>
 	<content contentuid="hb258be75g3f36g47eega17ege37bb46a7b7a" Source="BOOK_BOO_BookOfOrigins">起源之書</content>
 	<content contentuid="h2588ce8bgd9abg4a99ga06fga29cc4ccd53c" Source="BOOK_BOO_BookOfOrigins">閱讀</content>
-	<content contentuid="he269210dg8d16g4f1dg93e4g82940cfd66a9" Source="Summon_DisplayName.lsb" Key="Summon_SoulWolf_DisplayName">召喚伊凡的靈狼</content>
+	<content contentuid="he269210dg8d16g4f1dg93e4g82940cfd66a9" Source="Summon_DisplayName.lsb" Key="Summon_SoulWolf_DisplayName">召喚靈狼</content>
 </contentList>
