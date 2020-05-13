@@ -1,23 +1,23 @@
 <contentList>
-	<content contentuid="h260fdb55g52f3g40cbg8784g82be116bd64c" Source="BOO_BookOfOrigins_Dialog.lsj">You now recall your heritage. You are of...</content>
-	<content contentuid="h46c8c094g4917g44b2ga505g7252c4be5487" Source="BOO_BookOfOrigins_Dialog.lsj">Hmm. You seem to have forgotten your heritage.</content>
-	<content contentuid="h6d6ba4f0gbaecg4dc2g8c0ag296892624e8a" Source="BOO_BookOfOrigins_Dialog.lsj">You suddenly remember your origins. You were...</content>
-	<content contentuid="h2d99979bgab25g414bg9f2cg9cb3cb57d1e4" Source="BOO_BookOfOrigins_Dialog.lsj">Human descent. &lt;i&gt;(Encourage)&lt;/i&gt;</content>
-	<content contentuid="hbd76d0bfg5669g4d09g802cgaba0b159e063" Source="BOO_BookOfOrigins_Dialog.lsj">Lizard-kin descent.&lt;i&gt; (Dragon&apos;s Blaze)&lt;/i&gt;</content>
-	<content contentuid="hcbf794f0g8b24g4b9eg84ccgec63997e03f0" Source="BOO_BookOfOrigins_Dialog.lsj">A master of manipulating time. &lt;i&gt;(Time Warp)&lt;/i&gt;</content>
-	<content contentuid="hde23477dg6beeg4555ga216g4cec678e35fe" Source="BOO_BookOfOrigins_Dialog.lsj">A master of a great wolf. &lt;i&gt;(Summon Soul Wolf)&lt;/i&gt;</content>
-	<content contentuid="h6c023c14gac2fg4320gb7c5g2828cd67da55" Source="BOO_BookOfOrigins_Dialog.lsj">A bard with the voice of a demon. &lt;i&gt;(Maddening Song)&lt;/i&gt;</content>
-	<content contentuid="h6005678cg5e13g40eag8585g0106c9400661" Source="BOO_BookOfOrigins_Dialog.lsj">Someone with the piercing eyes of a demon. &lt;i&gt;(Demonic Stare)&lt;/i&gt;</content>
-	<content contentuid="hdd5dd74agb372g4d32g9276gf605c9f4d16d" Source="BOO_BookOfOrigins_Dialog.lsj">Elven descent. &lt;i&gt;(Flesh Sacrifice)&lt;/i&gt;</content>
-	<content contentuid="hffe697e4g9b02g45c0g8732gf92489e05976" Source="BOO_BookOfOrigins_Dialog.lsj">Strange descent. &lt;i&gt;(Play Dead)&lt;/i&gt;</content>
-	<content contentuid="h5ab71b5cg25c1g4426ga953g91584d64120d" Source="BOO_BookOfOrigins_Dialog.lsj">Your origins and heritage have once again solidified in your mind.</content>
-	<content contentuid="h53229adbg0b88g4890g8bdega3050787337b" Source="BOO_BookOfOrigins_Dialog.lsj">A great presence in the storm. &lt;i&gt;(Blinding Squall)&lt;/i&gt;</content>
-	<content contentuid="h02a2d549ge626g4fc9g8290g20318d145a6c" Source="BOO_BookOfOrigins_Dialog.lsj">Hmm. You&apos;ve forgotten your origins actually.</content>
-	<content contentuid="hb04fdbf3g44c1g407cga293g428693905000" Source="BOO_BookOfOrigins_Dialog.lsj">A defender of the weak. &lt;i&gt;(Dome of Protection)&lt;/i&gt;</content>
-	<content contentuid="h69bc41c7ga800g4d1fgb20bg23ba44d44b64" Source="BOO_BookOfOrigins_Dialog.lsj">Dwarven descent. &lt;i&gt;(Petrifying Touch)&lt;/i&gt;</content>
-	<content contentuid="h59d3c53egb9e0g4fbcgb908ge936f1adbc54" Source="BOO_BookOfOrigins_Dialog.lsj">Someone who could not be shackled. &lt;i&gt;(Break the Shackles)&lt;/i&gt;</content>
-	<content contentuid="h0380055dg8534g46ecga09fgbe08c34aaff7" Source="BOOK_BOO_BookOfOrigins">A tome with mystical properties. Those who read it seem to remember their past quite vividly.</content>
-	<content contentuid="hb258be75g3f36g47eega17ege37bb46a7b7a" Source="BOOK_BOO_BookOfOrigins">Book of Origins</content>
-	<content contentuid="h2588ce8bgd9abg4a99ga06fga29cc4ccd53c" Source="BOOK_BOO_BookOfOrigins">Read</content>
-	<content contentuid="he269210dg8d16g4f1dg93e4g82940cfd66a9" Source="Summon_DisplayName.lsb" Key="Summon_SoulWolf_DisplayName">Summon Soul Wolf</content>
+	<content contentuid="h260fdb55g52f3g40cbg8784g82be116bd64c" Source="BOO_BookOfOrigins_Dialog.lsj">자신의 과거 혈통이 되살아납니다. 당신은...</content>
+	<content contentuid="h46c8c094g4917g44b2ga505g7252c4be5487" Source="BOO_BookOfOrigins_Dialog.lsj">자신의 혈통을 잊어버렸습니다.</content>
+	<content contentuid="h6d6ba4f0gbaecg4dc2g8c0ag296892624e8a" Source="BOO_BookOfOrigins_Dialog.lsj">불현듯 기원의 기억이 되살아납니다. 당신은...</content>
+	<content contentuid="h2d99979bgab25g414bg9f2cg9cb3cb57d1e4" Source="BOO_BookOfOrigins_Dialog.lsj">사람의 혈통입니다. &lt;i&gt;(격려)&lt;/i&gt;</content>
+	<content contentuid="hbd76d0bfg5669g4d09g802cgaba0b159e063" Source="BOO_BookOfOrigins_Dialog.lsj">리자드의 혈통입니다. &lt;i&gt;(용의 불꽃)&lt;/i&gt;</content>
+	<content contentuid="hcbf794f0g8b24g4b9eg84ccgec63997e03f0" Source="BOO_BookOfOrigins_Dialog.lsj">시간 조작의 달인입니다. &lt;i&gt;(시간 왜곡)&lt;/i&gt;</content>
+	<content contentuid="hde23477dg6beeg4555ga216g4cec678e35fe" Source="BOO_BookOfOrigins_Dialog.lsj">위대한 늑대의 주인입니다. &lt;i&gt;(영혼의 늑대 소환)&lt;/i&gt;</content>
+	<content contentuid="h6c023c14gac2fg4320gb7c5g2828cd67da55" Source="BOO_BookOfOrigins_Dialog.lsj">악마의 목소리를 가진 가수입니다. &lt;i&gt;(광기 어린 노래)&lt;/i&gt;</content>
+	<content contentuid="h6005678cg5e13g40eag8585g0106c9400661" Source="BOO_BookOfOrigins_Dialog.lsj">악마의 눈을 가졌습니다. &lt;i&gt;(악마의 응시)&lt;/i&gt;</content>
+	<content contentuid="hdd5dd74agb372g4d32g9276gf605c9f4d16d" Source="BOO_BookOfOrigins_Dialog.lsj">엘프의 혈통입니다. &lt;i&gt;(피의 제물)&lt;/i&gt;</content>
+	<content contentuid="hffe697e4g9b02g45c0g8732gf92489e05976" Source="BOO_BookOfOrigins_Dialog.lsj">고대의 혈통입니다. &lt;i&gt;(죽은 척하기)&lt;/i&gt;</content>
+	<content contentuid="h5ab71b5cg25c1g4426ga953g91584d64120d" Source="BOO_BookOfOrigins_Dialog.lsj">당신의 기원과 혈통을 다시한번 마음에 새깁니다.</content>
+	<content contentuid="h53229adbg0b88g4890g8bdega3050787337b" Source="BOO_BookOfOrigins_Dialog.lsj">폭풍을 부루는 자입니다. &lt;i&gt;(눈 부시는 돌풍)&lt;/i&gt;</content>
+	<content contentuid="h02a2d549ge626g4fc9g8290g20318d145a6c" Source="BOO_BookOfOrigins_Dialog.lsj">갑자기 자신의 기원을 잊어버렸습니다.</content>
+	<content contentuid="hb04fdbf3g44c1g407cga293g428693905000" Source="BOO_BookOfOrigins_Dialog.lsj">약한자의 수호자입니다. &lt;i&gt;(보호장)&lt;/i&gt;</content>
+	<content contentuid="h69bc41c7ga800g4d1fgb20bg23ba44d44b64" Source="BOO_BookOfOrigins_Dialog.lsj">드워프의 혈통입니다. &lt;i&gt;(석화의 손길)&lt;/i&gt;</content>
+	<content contentuid="h59d3c53egb9e0g4fbcgb908ge936f1adbc54" Source="BOO_BookOfOrigins_Dialog.lsj">얼매이지 않는 영혼을 가진자입니다. &lt;i&gt;해방)&lt;/i&gt;</content>
+	<content contentuid="h0380055dg8534g46ecga09fgbe08c34aaff7" Source="BOOK_BOO_BookOfOrigins">신비로운 특성을 지닌 책입니다. 자신의 잊어버린 과거를 선명히 떠올릴 수 있습니다.</content>
+	<content contentuid="hb258be75g3f36g47eega17ege37bb46a7b7a" Source="BOOK_BOO_BookOfOrigins">기원의 책</content>
+	<content contentuid="h2588ce8bgd9abg4a99ga06fga29cc4ccd53c" Source="BOOK_BOO_BookOfOrigins">읽기</content>
+	<content contentuid="he269210dg8d16g4f1dg93e4g82940cfd66a9" Source="Summon_DisplayName.lsb" Key="Summon_SoulWolf_DisplayName">영혼의 늑대 소환</content>
 </contentList>
