@@ -37,7 +37,6 @@ local function FixRaceTalents(ui, call, ...)
         if stats["TALENT_" .. talent] then
             
             local str = Ext.GetTranslatedString(info[2], talent)
-            Ext.Print(str)
 
             ui:SetValue("talent_array", str, j + 3*k)
             ui:SetValue("talent_array", info[1], j + 1 + 3*k)
