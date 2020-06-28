@@ -1,9 +1,9 @@
 Book Of Origins for Divinity: Original Sin 2 - Definitive Edition
 =======
-Choose your origin and racial skills! 
+Choose your origin and racial skills, as well as the talents particular to a race.
 
 # Features
-* Allows the user to select their origin and racial skills
+* Allows the user to select their origin and racial skills and race-based talents.
 
 # Currently Supported Languages
 * English
