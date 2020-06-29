@@ -93,6 +93,7 @@ GetTemplate(_Item, _Book)
 AND
 QRY_SpeakerIsAvailable(_Char)
 THEN
+ProcRemovePolymorphsFromPlayer(_Char);
 Proc_StartDialog(0, "BOO_BookOfOrigins_Dialog", _Char);
 
 // Removal functions
