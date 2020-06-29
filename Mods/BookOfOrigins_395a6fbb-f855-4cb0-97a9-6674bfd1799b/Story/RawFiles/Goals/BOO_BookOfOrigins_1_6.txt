@@ -127,6 +127,26 @@ THEN
 CharacterRemoveTalent(_Char, _Ability);
 CharacterAddCivilAbilityPoint(_Char, 0);
 
+// Corpse eating actually requires Elf
+// Unable to remove Elf from elves...
+
+IF
+CanUseItem((CHARACTERGUID)_Char, (ITEMGUID)_Item, _)
+AND
+IsTagged(_Item, "BODYPART", 1)
+AND
+CharacterHasTalent(_Char, "Elf_CorpseEating", 1)
+AND
+IsTagged(_Char, "ELF", 0)
+THEN
+SetTag(_Char, "ELF");
+ProcObjectTimer(_Char, "BOO_CorpseEatingRemoveElf", 200);
+
+PROC
+ProcObjectTimerFinished((CHARACTERGUID)_Char, "BOO_CorpseEatingRemoveElf")
+THEN
+ClearTag(_Char, "ELF");
+
 // Overload of DoStuff to handle all flags
 
 PROC
@@ -161,7 +181,7 @@ THEN
 BOO_RemoveRacialAbilities(_Char);
 CharacterAddTalent(_Char, _Thing);
 
-// Change skills, talents, abilities
+// Deal with the flags from dialog
 
 IF
 ObjectFlagSet(_FlagName, (CHARACTERGUID)_Char, _)
