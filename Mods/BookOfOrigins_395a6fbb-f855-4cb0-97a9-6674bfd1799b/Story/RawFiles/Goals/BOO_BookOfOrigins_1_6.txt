@@ -192,6 +192,21 @@ THEN
 ObjectClearFlag(_Char, _FlagName);
 BOO_DoStuff(_Char, _Task, _Thing);
 
+// Compatibility with RRBC
+IF
+GameStarted(_, _)
+AND
+SysIsActive("RRBC_Refund")
+THEN
+GlobalSetFlag("RRBC_Active");
+
+IF
+GameStarted(_, _)
+AND
+NOT SysIsActive("RRBC_Refund")
+THEN
+GlobalClearFlag("RRBC_Active");
+
 EXITSECTION
 
 ENDEXITSECTION
