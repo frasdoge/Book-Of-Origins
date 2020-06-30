@@ -10,6 +10,7 @@ Choose your origin and racial skills, as well as the talents particular to a rac
 * Japanese
 * Chinese (Simplified & Traditional)
 * Korean
+* German
 
 # Releases
 * [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=2020334615)
