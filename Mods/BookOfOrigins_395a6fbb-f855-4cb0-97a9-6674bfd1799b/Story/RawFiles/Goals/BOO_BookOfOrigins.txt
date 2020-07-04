@@ -3,56 +3,69 @@ SubGoalCombiner SGC_AND
 INITSECTION
 
 DB_BOO_OriginSkills("Dome_CircleOfProtection");
-DB_BOO_OriginSkills("Shout_BreakTheShackles");
-DB_BOO_OriginSkills("Target_TimeWarp");
-DB_BOO_OriginSkills("Target_Squall");
-DB_BOO_OriginSkills("Target_MaddeningSong");
-DB_BOO_OriginSkills("Target_DemonicStare");
-DB_BOO_OriginSkills("Summon_SoulWolf");
+DB_BOO_OriginSkills("Shout_BreakTheShackles" );
+DB_BOO_OriginSkills("Target_TimeWarp"        );
+DB_BOO_OriginSkills("Target_Squall"          );
+DB_BOO_OriginSkills("Target_MaddeningSong"   );
+DB_BOO_OriginSkills("Target_DemonicStare"    );
+DB_BOO_OriginSkills("Summon_SoulWolf"        );
 
-DB_BOO_RacialSkills("Shout_FleshSacrifice");
-DB_BOO_RacialSkills("Shout_InspireStart");
-DB_BOO_RacialSkills("Shout_PlayDead");
-DB_BOO_RacialSkills("Cone_Flamebreath");
-DB_BOO_RacialSkills("Target_PetrifyingTouch");
+DB_BOO_RacialSkills("Shout_FleshSacrifice"   );
+DB_BOO_RacialSkills("Shout_InspireStart"     );
+DB_BOO_RacialSkills("Shout_PlayDead"         );
+DB_BOO_RacialSkills("Cone_Flamebreath"       );
+DB_BOO_RacialSkills("Target_PetrifyingTouch" );
 
-DB_BOO_RacialCivils("Lizard_Persuasion");
-DB_BOO_RacialCivils("Elf_Lore");
-DB_BOO_RacialCivils("Dwarf_Sneaking");
-DB_BOO_RacialCivils("Human_Civil");
+DB_BOO_RacialCivils("Lizard_Persuasion"      );
+DB_BOO_RacialCivils("Elf_Lore"               );
+DB_BOO_RacialCivils("Dwarf_Sneaking"         );
+DB_BOO_RacialCivils("Human_Civil"            );
 
-DB_BOO_RacialAbilities("Lizard_Resistance");
-DB_BOO_RacialAbilities("Elf_CorpseEating");
-DB_BOO_RacialAbilities("Dwarf_Sturdy");
-DB_BOO_RacialAbilities("Human_Inventive");
+DB_BOO_RacialAbilities("Lizard_Resistance"   );
+DB_BOO_RacialAbilities("Elf_CorpseEating"    );
+DB_BOO_RacialAbilities("Dwarf_Sturdy"        );
+DB_BOO_RacialAbilities("Human_Inventive"     );
 
-DB_BOO_Flags("BOO_BookOfOrigins_DomeOfProtection",   "OriginSkill",   "Dome_CircleOfProtection");
-DB_BOO_Flags("BOO_BookOfOrigins_MaddeningSong",      "OriginSkill",   "Target_MaddeningSong");
-DB_BOO_Flags("BOO_BookOfOrigins_BlindingSquall",     "OriginSkill",   "Target_Squall");
-DB_BOO_Flags("BOO_BookOfOrigins_TimeWarp",           "OriginSkill",   "Target_TimeWarp");
-DB_BOO_Flags("BOO_BookOfOrigins_SoulWolf",           "OriginSkill",   "Summon_SoulWolf");
-DB_BOO_Flags("BOO_BookOfOrigins_BreakTheShackles",   "OriginSkill",   "Shout_BreakTheShackles");
-DB_BOO_Flags("BOO_BookOfOrigins_DemonicStare",       "OriginSkill",   "Target_DemonicStare");
+DB_BOO_Flags("BOO_BookOfOrigins_DomeOfProtection"  , "OriginSkill"  , "Dome_CircleOfProtection");
+DB_BOO_Flags("BOO_BookOfOrigins_MaddeningSong"     , "OriginSkill"  , "Target_MaddeningSong"   );
+DB_BOO_Flags("BOO_BookOfOrigins_BlindingSquall"    , "OriginSkill"  , "Target_Squall"          );
+DB_BOO_Flags("BOO_BookOfOrigins_TimeWarp"          , "OriginSkill"  , "Target_TimeWarp"        );
+DB_BOO_Flags("BOO_BookOfOrigins_SoulWolf"          , "OriginSkill"  , "Summon_SoulWolf"        );
+DB_BOO_Flags("BOO_BookOfOrigins_BreakTheShackles"  , "OriginSkill"  , "Shout_BreakTheShackles" );
+DB_BOO_Flags("BOO_BookOfOrigins_DemonicStare"      , "OriginSkill"  , "Target_DemonicStare"    );
 
-DB_BOO_Flags("BOO_BookOfOrigins_FleshSacrifice",     "RacialSkill",   "Shout_FleshSacrifice");
-DB_BOO_Flags("BOO_BookOfOrigins_Encourage",          "RacialSkill",   "Shout_InspireStart");
-DB_BOO_Flags("BOO_BookOfOrigins_DragonsBlaze",       "RacialSkill",   "Cone_Flamebreath");
-DB_BOO_Flags("BOO_BookOfOrigins_PetrifyingTouch",    "RacialSkill",   "Target_PetrifyingTouch");
-DB_BOO_Flags("BOO_BookOfOrigins_PlayDead",           "RacialSkill",   "Shout_PlayDead");
+DB_BOO_Flags("BOO_BookOfOrigins_FleshSacrifice"    , "RacialSkill"  , "Shout_FleshSacrifice"   );
+DB_BOO_Flags("BOO_BookOfOrigins_Encourage"         , "RacialSkill"  , "Shout_InspireStart"     );
+DB_BOO_Flags("BOO_BookOfOrigins_DragonsBlaze"      , "RacialSkill"  , "Cone_Flamebreath"       );
+DB_BOO_Flags("BOO_BookOfOrigins_PetrifyingTouch"   , "RacialSkill"  , "Target_PetrifyingTouch" );
+DB_BOO_Flags("BOO_BookOfOrigins_PlayDead"          , "RacialSkill"  , "Shout_PlayDead"         );
 
-DB_BOO_Flags("BOO_BookOfOrigins_AncestralKnowledge", "RacialCivil",   "Elf_Lore");
-DB_BOO_Flags("BOO_BookOfOrigins_Thrifty",            "RacialCivil",   "Human_Civil");
-DB_BOO_Flags("BOO_BookOfOrigins_Spellsong",          "RacialCivil",   "Lizard_Persuasion");
-DB_BOO_Flags("BOO_BookOfOrigins_DwarvenGuile",       "RacialCivil",   "Dwarf_Sneaking");
+DB_BOO_Flags("BOO_BookOfOrigins_AncestralKnowledge", "RacialCivil"  , "Elf_Lore"               );
+DB_BOO_Flags("BOO_BookOfOrigins_Thrifty"           , "RacialCivil"  , "Human_Civil"            );
+DB_BOO_Flags("BOO_BookOfOrigins_Spellsong"         , "RacialCivil"  , "Lizard_Persuasion"      );
+DB_BOO_Flags("BOO_BookOfOrigins_DwarvenGuile"      , "RacialCivil"  , "Dwarf_Sneaking"         );
 
-DB_BOO_Flags("BOO_BookOfOrigins_CorpseEater",        "RacialAbility", "Elf_CorpseEating");
-DB_BOO_Flags("BOO_BookOfOrigins_Ingenious",          "RacialAbility", "Human_Inventive");
-DB_BOO_Flags("BOO_BookOfOrigins_Sophisticated",      "RacialAbility", "Lizard_Resistance");
-DB_BOO_Flags("BOO_BookOfOrigins_Sturdy",             "RacialAbility", "Dwarf_Sturdy");
+DB_BOO_Flags("BOO_BookOfOrigins_CorpseEater"       , "RacialAbility", "Elf_CorpseEating"       );
+DB_BOO_Flags("BOO_BookOfOrigins_Ingenious"         , "RacialAbility", "Human_Inventive"        );
+DB_BOO_Flags("BOO_BookOfOrigins_Sophisticated"     , "RacialAbility", "Lizard_Resistance"      );
+DB_BOO_Flags("BOO_BookOfOrigins_Sturdy"            , "RacialAbility", "Dwarf_Sturdy"           );
 
-DB_BOO_BOOK("BOOK_BOO_BookOfOrigins_26a03372-4c59-4903-8c63-3318fdaaccf3");
+DB_BOO_Book("BOOK_BOO_BookOfOrigins_26a03372-4c59-4903-8c63-3318fdaaccf3");
+
+BOO_Update();
 
 KBSECTION
+
+PROC
+BOO_Update()
+AND
+DB_IsPlayer(_Char)
+AND
+DB_BOO_RacialSkills(_Skill)
+AND
+CharacterHasSkill(_Char, _Skill, _)
+THEN
+DB_BOO_RacialSkillsMap(_Char, _Skill);
 
 // Give the characters the book
 
@@ -63,7 +76,7 @@ IsGameLevel(_Region, 1)
 AND
 DB_IsPlayer(_Char)
 AND
-DB_BOO_BOOK(_Book)
+DB_BOO_Book(_Book)
 AND
 ItemTemplateIsInCharacterInventory(_Char, _Book, 0)
 THEN
@@ -74,7 +87,7 @@ CharacterJoinedParty(_Char)
 AND
 DB_IsPlayer(_Char)
 AND
-DB_BOO_BOOK(_Book)
+DB_BOO_Book(_Book)
 AND
 ItemTemplateIsInCharacterInventory(_Char, _Book, 0)
 THEN
@@ -87,7 +100,7 @@ CharacterUsedItem(_Char, _Item)
 AND
 DB_IsPlayer(_Char)
 AND
-DB_BOO_BOOK(_Book)
+DB_BOO_Book(_Book)
 AND
 GetTemplate(_Item, _Book)
 AND
