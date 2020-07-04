@@ -115,6 +115,8 @@ AND
 GetStatusType(_Status, "POLYMORPHED")
 THEN
 BOO_RemoveRacialSkills(_Char);
+BOO_RemoveRacialCivils(_Char);
+BOO_RemoveRacialAbilities(_Char);
 
 IF
 CharacterStatusRemoved(_Char, _Status, _)
@@ -124,9 +126,17 @@ AND
 NOT QryIsPolymorphing(_Char) // Not going from one poly form to another
 AND
 DB_BOO_RacialSkillsMap(_Char, _Skill)
+AND
+DB_BOO_RacialCivilsMap(_Char, _Civil)
+AND
+DB_BOO_RacialAbilitiesMap(_Char, _Ability)
 THEN
 BOO_RemoveRacialSkills(_Char);
+BOO_RemoveRacialCivils(_Char);
+BOO_RemoveRacialAbilities(_Char);
 CharacterAddSkill(_Char, _Skill, 0);
+CharacterAddTalent(_Char, _Civil);
+CharacterAddTalent(_Char, _Ability);
 
 // Removal functions
 
@@ -188,6 +198,7 @@ THEN
 BOO_RemoveOriginSkills(_Char);
 CharacterAddSkill(_Char, _Skill, 0);
 
+// Racial skills
 PROC
 BOO_DialogHandler((CHARACTERGUID)_Char, "RacialSkill", (STRING)_Skill)
 AND
@@ -202,17 +213,35 @@ BOO_RemoveRacialSkills(_Char);
 CharacterAddSkill(_Char, _Skill, 0);
 DB_BOO_RacialSkillsMap(_Char, _Skill);
 
+// Racial civils
+PROC
+BOO_DialogHandler((CHARACTERGUID)_Char, "RacialCivil", (STRING)_Talent)
+AND
+DB_BOO_RacialCivilsMap(_Char, _Talent)
+THEN
+NOT DB_BOO_RacialCivilsMap(_Char, _Talent);
+
 PROC
 BOO_DialogHandler((CHARACTERGUID)_Char, "RacialCivil", (STRING)_Talent)
 THEN
 BOO_RemoveRacialCivils(_Char);
 CharacterAddTalent(_Char, _Talent);
+DB_BOO_RacialCivilsMap(_Char, _Talent);
+
+// Racial abilities
+PROC
+BOO_DialogHandler((CHARACTERGUID)_Char, "RacialAbility", (STRING)_Talent)
+AND
+DB_BOO_RacialAbilitiesMap(_Char, _Talent)
+THEN
+NOT DB_BOO_RacialAbilitiesMap(_Char, _Talent);
 
 PROC
 BOO_DialogHandler((CHARACTERGUID)_Char, "RacialAbility", (STRING)_Talent)
 THEN
 BOO_RemoveRacialAbilities(_Char);
 CharacterAddTalent(_Char, _Talent);
+DB_BOO_RacialAbilitiesMap(_Char, _Talent);
 
 // Deal with the flags from dialog
 
