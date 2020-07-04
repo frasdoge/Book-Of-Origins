@@ -657,6 +657,11 @@
                                           "name" : {"type" : 22, "value" : "BOO_BookOfOrigins_Encourage"},
                                           "paramval" : {"type" : 4, "value" : 0},
                                           "value" : {"type" : 19, "value" : 1}
+                                       },
+                                       {
+                                          "name" : {"type" : 22, "value" : "MZFX_AdaptiveLizards_CanHaveLizardSkills"},
+                                          "paramval" : {"type" : 4, "value" : 0},
+                                          "value" : {"type" : 19, "value" : 0}
                                        }
                                     ],"type" : {"type" : 22, "value" : "Character"}}
                               ]
@@ -876,6 +881,11 @@
                                     "flag" : [
                                        {
                                           "name" : {"type" : 22, "value" : "BOO_BookOfOrigins_DragonsBlaze"},
+                                          "paramval" : {"type" : 4, "value" : 0},
+                                          "value" : {"type" : 19, "value" : 1}
+                                       },
+                                       {
+                                          "name" : {"type" : 22, "value" : "MZFX_AdaptiveLizards_CanHaveLizardSkills"},
                                           "paramval" : {"type" : 4, "value" : 0},
                                           "value" : {"type" : 19, "value" : 1}
                                        }
@@ -1715,6 +1725,11 @@
                                           "name" : {"type" : 22, "value" : "BOO_BookOfOrigins_FleshSacrifice"},
                                           "paramval" : {"type" : 4, "value" : 0},
                                           "value" : {"type" : 19, "value" : 1}
+                                       },
+                                       {
+                                          "name" : {"type" : 22, "value" : "MZFX_AdaptiveLizards_CanHaveLizardSkills"},
+                                          "paramval" : {"type" : 4, "value" : 0},
+                                          "value" : {"type" : 19, "value" : 0}
                                        }
                                     ],"type" : {"type" : 22, "value" : "Character"}}
                               ]
@@ -1824,6 +1839,11 @@
                                           "name" : {"type" : 22, "value" : "BOO_BookOfOrigins_PlayDead"},
                                           "paramval" : {"type" : 4, "value" : 0},
                                           "value" : {"type" : 19, "value" : 1}
+                                       },
+                                       {
+                                          "name" : {"type" : 22, "value" : "MZFX_AdaptiveLizards_CanHaveLizardSkills"},
+                                          "paramval" : {"type" : 4, "value" : 0},
+                                          "value" : {"type" : 19, "value" : 0}
                                        }
                                     ],"type" : {"type" : 22, "value" : "Character"}}
                               ]
@@ -3096,6 +3116,11 @@
                                           "name" : {"type" : 22, "value" : "BOO_BookOfOrigins_PetrifyingTouch"},
                                           "paramval" : {"type" : 4, "value" : 0},
                                           "value" : {"type" : 19, "value" : 1}
+                                       },
+                                       {
+                                          "name" : {"type" : 22, "value" : "MZFX_AdaptiveLizards_CanHaveLizardSkills"},
+                                          "paramval" : {"type" : 4, "value" : 0},
+                                          "value" : {"type" : 19, "value" : 0}
                                        }
                                     ],"type" : {"type" : 22, "value" : "Character"}}
                               ]
@@ -3271,7 +3296,7 @@
          },
          "editorData" : {
             "needLayout" : {"type" : 19, "value" : 0},
-            "nextNodeId" : {"type" : 5, "value" : 48}
+            "nextNodeId" : {"type" : 5, "value" : 49}
          }
       }
    }

@@ -93,8 +93,28 @@ GetTemplate(_Item, _Book)
 AND
 QRY_SpeakerIsAvailable(_Char)
 THEN
-ProcRemovePolymorphsFromPlayer(_Char);
 Proc_StartDialog(0, "BOO_BookOfOrigins_Dialog", _Char);
+
+// Mask of the Shapeshifter fixes
+
+IF
+CharacterStatusAttempt(_Char, _Status, _)
+AND
+GetStatusType(_Status, "POLYMORPHED")
+THEN
+BOO_RemoveRacialSkills(_Char);
+
+IF
+CharacterStatusRemoved(_Char, _Status, _)
+AND
+GetStatusType(_Status, "POLYMORPHED")
+AND
+NOT QryIsPolymorphing(_Char) // Not going from one poly form to another
+AND
+DB_BOO_RacialSkillsMap(_Char, _Skill)
+THEN
+BOO_RemoveRacialSkills(_Char);
+CharacterAddSkill(_Char, _Skill, 0);
 
 // Removal functions
 
@@ -148,39 +168,39 @@ ProcObjectTimerFinished((CHARACTERGUID)_Char, "BOO_CorpseEatingRemoveElf")
 THEN
 ClearTag(_Char, "ELF");
 
-// Overload of DoStuff to handle all flags
+// Overload of DialogHandler to handle all flags
 
 PROC
-BOO_DoStuff((CHARACTERGUID)_Char, (STRING)_Task, (STRING)_Thing)
-AND
-_Task == "OriginSkill"
+BOO_DialogHandler((CHARACTERGUID)_Char, "OriginSkill", (STRING)_Skill)
 THEN
 BOO_RemoveOriginSkills(_Char);
-CharacterAddSkill(_Char, _Thing, 0);
+CharacterAddSkill(_Char, _Skill, 0);
 
 PROC
-BOO_DoStuff((CHARACTERGUID)_Char, (STRING)_Task, (STRING)_Thing)
+BOO_DialogHandler((CHARACTERGUID)_Char, "RacialSkill", (STRING)_Skill)
 AND
-_Task == "RacialSkill"
+DB_BOO_RacialSkillsMap(_Char, _Skill)
+THEN
+NOT DB_BOO_RacialSkillsMap(_Char, _Skill);
+
+PROC
+BOO_DialogHandler((CHARACTERGUID)_Char, "RacialSkill", (STRING)_Skill)
 THEN
 BOO_RemoveRacialSkills(_Char);
-CharacterAddSkill(_Char, _Thing, 0);
+CharacterAddSkill(_Char, _Skill, 0);
+DB_BOO_RacialSkillsMap(_Char, _Skill);
 
 PROC
-BOO_DoStuff((CHARACTERGUID)_Char, (STRING)_Task, (STRING)_Thing)
-AND
-_Task == "RacialCivil"
+BOO_DialogHandler((CHARACTERGUID)_Char, "RacialCivil", (STRING)_Talent)
 THEN
 BOO_RemoveRacialCivils(_Char);
-CharacterAddTalent(_Char, _Thing);
+CharacterAddTalent(_Char, _Talent);
 
 PROC
-BOO_DoStuff((CHARACTERGUID)_Char, (STRING)_Task, (STRING)_Thing)
-AND
-_Task == "RacialAbility"
+BOO_DialogHandler((CHARACTERGUID)_Char, "RacialAbility", (STRING)_Talent)
 THEN
 BOO_RemoveRacialAbilities(_Char);
-CharacterAddTalent(_Char, _Thing);
+CharacterAddTalent(_Char, _Talent);
 
 // Deal with the flags from dialog
 
@@ -190,7 +210,7 @@ AND
 DB_BOO_Flags(_FlagName, _Task, _Thing)
 THEN
 ObjectClearFlag(_Char, _FlagName);
-BOO_DoStuff(_Char, _Task, _Thing);
+BOO_DialogHandler(_Char, _Task, _Thing);
 
 // Compatibility with RRBC
 IF
