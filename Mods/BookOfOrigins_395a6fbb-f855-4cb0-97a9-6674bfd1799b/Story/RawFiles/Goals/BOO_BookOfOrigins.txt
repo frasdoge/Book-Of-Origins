@@ -60,11 +60,12 @@ THEN
 BOO_Update();
 DB_BOO_Update(1.70);
 
-// Moved book to DB
+// Moved book to DB, compatibility with Adaptive Lizards
 PROC
 BOO_Update()
 THEN
 DB_BOO_Book("BOOK_BOO_BookOfOrigins_26a03372-4c59-4903-8c63-3318fdaaccf3");
+GlobalSetFlag("MZFX_AdaptiveLizards_CanUndeadHave"); // Adaptive Lizards
 
 // Give the characters the book
 
