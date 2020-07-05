@@ -123,6 +123,11 @@ IF
 CharacterStatusRemoved(_Char, _Status, _)
 AND
 GetStatusType(_Status, "POLYMORPHED")
+THEN
+ProcObjectTimer(_Char, "BOO_PolymorphReset", 200);
+
+PROC
+ProcObjectTimerFinished((CHARACTERGUID)_Char, "BOO_PolymorphReset")
 AND
 NOT QryIsPolymorphing(_Char) // Not going from one poly form to another
 AND
