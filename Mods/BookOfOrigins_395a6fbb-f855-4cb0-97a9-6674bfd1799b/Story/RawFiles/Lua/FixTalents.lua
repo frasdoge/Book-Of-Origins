@@ -1,19 +1,9 @@
-local function GetArrayIndexStart(ui, arrayName, offset)
+local function GetArrayIndexStart(ui, arrayName)
     local i = 0
-    while i < 9999 do
-        local val = ui:GetValue(arrayName, "number", i)
-        if val == nil then
-            val = ui:GetValue(arrayName, "string", i)
-            if val == nil then
-                val = ui:GetValue(arrayName, "boolean", i)
-            end
-        end
-        if val == nil then
-            return i
-        end
-        i = i + offset
+    while ui:GetValue(arrayName, nil, i) ~= nil do
+        i = i + 1
     end
-    return -1
+    return i
 end
 
 local raceTalents = {["Lizard_Persuasion"] = {94, "ha4af67a7g7112g4e66gbaedg6bf024feb097"},
@@ -29,7 +19,7 @@ local function FixRaceTalents(ui, call, ...)
     local charHandle = ui:GetPlayerHandle()
     local stats = Ext.GetCharacter(charHandle).Stats
 
-    local j = GetArrayIndexStart(ui, "talent_array", 1)
+    local j = GetArrayIndexStart(ui, "talent_array")
     local k = 0
 
     for talent, info in pairs(raceTalents) do
@@ -46,7 +36,6 @@ local function FixRaceTalents(ui, call, ...)
         end
 
     end
-    
 end
 
 local function SessionLoaded()
