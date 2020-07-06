@@ -50,22 +50,66 @@ DB_BOO_Flags("BOO_BookOfOrigins_Ingenious"         , "RacialAbility", "Human_Inv
 DB_BOO_Flags("BOO_BookOfOrigins_Sophisticated"     , "RacialAbility", "Lizard_Resistance"      );
 DB_BOO_Flags("BOO_BookOfOrigins_Sturdy"            , "RacialAbility", "Dwarf_Sturdy"           );
 
+DB_BOO_Book("BOOK_BOO_BookOfOrigins_26a03372-4c59-4903-8c63-3318fdaaccf3");
+
 KBSECTION
 
-IF
-GameStarted(_, _)
-AND
-NOT DB_BOO_Update(_)
-THEN
-BOO_Update();
-DB_BOO_Update(1.70);
+// Adaptive Lizards
 
-// Moved book to DB, compatibility with Adaptive Lizards
-PROC
-BOO_Update()
+// Override their queries by enabling my override flag
+// Replace queries
+
+IF
+GameStarted(_Region, _)
+AND
+IsGameLevel(_Region, 1)
 THEN
-DB_BOO_Book("BOOK_BOO_BookOfOrigins_26a03372-4c59-4903-8c63-3318fdaaccf3");
-GlobalSetFlag("MZFX_AdaptiveLizards_CanUndeadHave"); // Adaptive Lizards
+GlobalSetFlag("BOO_OverrideAdaptiveLizardsQRY");
+
+QRY
+Qry_MZFX_AdaptiveLizards_CanHaveLizardSkills((CHARACTERGUID)_Char)
+AND
+DB_MZFX_AdaptiveLizards_DialogSkill((STRING)_DialogFlag, (STRING)_Skill)
+AND
+CharacterHasSkill(_Char, _Skill, 1)
+THEN
+DB_NOOP(1);
+
+QRY
+Qry_MZFX_AdaptiveLizards_CanHaveLizardSkill((CHARACTERGUID)_Char)
+THEN
+DB_NOOP(1);
+
+// Catch all 
+
+IF
+CharacterStatusApplied(_Char, _Status, _)
+AND
+GetStatusType(_Status, "POLYMORPHED")
+AND
+Qry_MZFX_AdaptiveLizards_CanHaveLizardSkillAndSkills(_Char)
+THEN
+ObjectSetFlag(_Char, "MZFX_AdaptiveLizards_CanHaveLizardSkills");
+
+IF
+CharacterStatusApplied(_Char, _Status, _)
+AND
+GetStatusType(_Status, "POLYMORPHED")
+AND
+NOT Qry_MZFX_AdaptiveLizards_CanHaveLizardSkillAndSkills(_Char)
+THEN
+ObjectClearFlag(_Char, "MZFX_AdaptiveLizards_CanHaveLizardSkills");
+
+// Helper
+
+QRY
+Qry_MZFX_AdaptiveLizards_CanHaveLizardSkillAndSkills((CHARACTERGUID)_Char)
+AND
+Qry_MZFX_AdaptiveLizards_CanHaveLizardSkill(_Char)
+AND
+Qry_MZFX_AdaptiveLizards_CanHaveLizardSkills(_Char)
+THEN
+DB_NOOP(1);
 
 // Give the characters the book
 

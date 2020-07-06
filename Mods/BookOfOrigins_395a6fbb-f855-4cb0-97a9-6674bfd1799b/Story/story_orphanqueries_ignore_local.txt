@@ -1,1 +1,1 @@
-DB_MZFX_AdaptiveLizards_CharBreath 2
+DB_MZFX_AdaptiveLizards_DialogSkill 2
