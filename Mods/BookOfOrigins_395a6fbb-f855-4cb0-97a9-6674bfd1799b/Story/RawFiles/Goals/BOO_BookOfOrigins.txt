@@ -176,16 +176,28 @@ AND
 NOT QryIsPolymorphing(_Char) // Not going from one poly form to another
 AND
 DB_BOO_RacialSkillsMap(_Char, _Skill)
+THEN
+BOO_RemoveRacialSkills(_Char);
+CharacterAddSkill(_Char, _Skill, 0);
+
+PROC
+ProcObjectTimerFinished((CHARACTERGUID)_Char, "BOO_PolymorphReset")
+AND
+NOT QryIsPolymorphing(_Char) // Not going from one poly form to another
 AND
 DB_BOO_RacialCivilsMap(_Char, _Civil)
+THEN
+BOO_RemoveRacialCivils(_Char);
+CharacterAddTalent(_Char, _Civil);
+
+PROC
+ProcObjectTimerFinished((CHARACTERGUID)_Char, "BOO_PolymorphReset")
+AND
+NOT QryIsPolymorphing(_Char) // Not going from one poly form to another
 AND
 DB_BOO_RacialAbilitiesMap(_Char, _Ability)
 THEN
-BOO_RemoveRacialSkills(_Char);
-BOO_RemoveRacialCivils(_Char);
 BOO_RemoveRacialAbilities(_Char);
-CharacterAddSkill(_Char, _Skill, 0);
-CharacterAddTalent(_Char, _Civil);
 CharacterAddTalent(_Char, _Ability);
 
 // Removal functions
