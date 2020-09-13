@@ -17,7 +17,7 @@
 	<content contentuid="h69bc41c7ga800g4d1fgb20bg23ba44d44b64" Source="BOO_BookOfOrigins_Dialog.lsj">矮人之血脈。 &lt;i&gt;(石化之觸)&lt;/i&gt;</content>
 	<content contentuid="h59d3c53egb9e0g4fbcgb908ge936f1adbc54" Source="BOO_BookOfOrigins_Dialog.lsj">無法被束縛之人。 &lt;i&gt;(打破枷鎖)&lt;/i&gt;</content>
 	<content contentuid="h0380055dg8534g46ecga09fgbe08c34aaff7" Source="BOOK_BOO_BookOfOrigins">一本神秘的書籍。 能閱讀它之人似乎會憶起被塵封的過去...</content>
-	<content contentuid="hb258be75g3f36g47eega17ege37bb46a7b7a" Source="BOOK_BOO_BookOfOrigins">起源之書</content>
+	<content contentuid="hb258be75g3f36g47eega17ege37bb46a7b7a" Source="BOOK_BOO_BookOfOrigins">《起源之書》</content>
 	<content contentuid="h2588ce8bgd9abg4a99ga06fga29cc4ccd53c" Source="BOOK_BOO_BookOfOrigins">閱讀</content>
 	<content contentuid="he269210dg8d16g4f1dg93e4g82940cfd66a9" Source="Summon_DisplayName.lsb" Key="Summon_SoulWolf_DisplayName">召喚靈狼</content>
 </contentList>
