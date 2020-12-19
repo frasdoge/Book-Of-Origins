@@ -3,20 +3,113 @@ SubGoalCombiner SGC_AND
 INITSECTION
 
 DB_BOO_OriginSkills("Dome_CircleOfProtection");
-DB_BOO_OriginSkills("Shout_BreakTheShackles");
-DB_BOO_OriginSkills("Target_TimeWarp");
-DB_BOO_OriginSkills("Target_Squall");
-DB_BOO_OriginSkills("Target_MaddeningSong");
-DB_BOO_OriginSkills("Target_DemonicStare");
-DB_BOO_OriginSkills("Summon_SoulWolf");
+DB_BOO_OriginSkills("Shout_BreakTheShackles" );
+DB_BOO_OriginSkills("Target_TimeWarp"        );
+DB_BOO_OriginSkills("Target_Squall"          );
+DB_BOO_OriginSkills("Target_MaddeningSong"   );
+DB_BOO_OriginSkills("Target_DemonicStare"    );
+DB_BOO_OriginSkills("Summon_SoulWolf"        );
 
-DB_BOO_RacialSkills("Shout_FleshSacrifice");
-DB_BOO_RacialSkills("Shout_InspireStart");
-DB_BOO_RacialSkills("Shout_PlayDead");
-DB_BOO_RacialSkills("Cone_Flamebreath");
-DB_BOO_RacialSkills("Target_PetrifyingTouch");
+DB_BOO_RacialSkills("Shout_FleshSacrifice"   );
+DB_BOO_RacialSkills("Shout_InspireStart"     );
+DB_BOO_RacialSkills("Shout_PlayDead"         );
+DB_BOO_RacialSkills("Cone_Flamebreath"       );
+DB_BOO_RacialSkills("Target_PetrifyingTouch" );
+
+DB_BOO_RacialCivils("Lizard_Persuasion"      );
+DB_BOO_RacialCivils("Elf_Lore"               );
+DB_BOO_RacialCivils("Dwarf_Sneaking"         );
+DB_BOO_RacialCivils("Human_Civil"            );
+
+DB_BOO_RacialAbilities("Lizard_Resistance"   );
+DB_BOO_RacialAbilities("Elf_CorpseEating"    );
+DB_BOO_RacialAbilities("Dwarf_Sturdy"        );
+DB_BOO_RacialAbilities("Human_Inventive"     );
+
+DB_BOO_Flags("BOO_BookOfOrigins_DomeOfProtection"  , "OriginSkill"  , "Dome_CircleOfProtection");
+DB_BOO_Flags("BOO_BookOfOrigins_MaddeningSong"     , "OriginSkill"  , "Target_MaddeningSong"   );
+DB_BOO_Flags("BOO_BookOfOrigins_BlindingSquall"    , "OriginSkill"  , "Target_Squall"          );
+DB_BOO_Flags("BOO_BookOfOrigins_TimeWarp"          , "OriginSkill"  , "Target_TimeWarp"        );
+DB_BOO_Flags("BOO_BookOfOrigins_SoulWolf"          , "OriginSkill"  , "Summon_SoulWolf"        );
+DB_BOO_Flags("BOO_BookOfOrigins_BreakTheShackles"  , "OriginSkill"  , "Shout_BreakTheShackles" );
+DB_BOO_Flags("BOO_BookOfOrigins_DemonicStare"      , "OriginSkill"  , "Target_DemonicStare"    );
+
+DB_BOO_Flags("BOO_BookOfOrigins_FleshSacrifice"    , "RacialSkill"  , "Shout_FleshSacrifice"   );
+DB_BOO_Flags("BOO_BookOfOrigins_Encourage"         , "RacialSkill"  , "Shout_InspireStart"     );
+DB_BOO_Flags("BOO_BookOfOrigins_DragonsBlaze"      , "RacialSkill"  , "Cone_Flamebreath"       );
+DB_BOO_Flags("BOO_BookOfOrigins_PetrifyingTouch"   , "RacialSkill"  , "Target_PetrifyingTouch" );
+DB_BOO_Flags("BOO_BookOfOrigins_PlayDead"          , "RacialSkill"  , "Shout_PlayDead"         );
+
+DB_BOO_Flags("BOO_BookOfOrigins_AncestralKnowledge", "RacialCivil"  , "Elf_Lore"               );
+DB_BOO_Flags("BOO_BookOfOrigins_Thrifty"           , "RacialCivil"  , "Human_Civil"            );
+DB_BOO_Flags("BOO_BookOfOrigins_Spellsong"         , "RacialCivil"  , "Lizard_Persuasion"      );
+DB_BOO_Flags("BOO_BookOfOrigins_DwarvenGuile"      , "RacialCivil"  , "Dwarf_Sneaking"         );
+
+DB_BOO_Flags("BOO_BookOfOrigins_CorpseEater"       , "RacialAbility", "Elf_CorpseEating"       );
+DB_BOO_Flags("BOO_BookOfOrigins_Ingenious"         , "RacialAbility", "Human_Inventive"        );
+DB_BOO_Flags("BOO_BookOfOrigins_Sophisticated"     , "RacialAbility", "Lizard_Resistance"      );
+DB_BOO_Flags("BOO_BookOfOrigins_Sturdy"            , "RacialAbility", "Dwarf_Sturdy"           );
+
+DB_BOO_Book("BOOK_BOO_BookOfOrigins_26a03372-4c59-4903-8c63-3318fdaaccf3");
 
 KBSECTION
+
+// Adaptive Lizards
+
+// Override their queries by enabling my override flag
+// Replace queries
+
+IF
+GameStarted(_Region, _)
+AND
+IsGameLevel(_Region, 1)
+THEN
+GlobalSetFlag("BOO_OverrideAdaptiveLizardsQRY");
+
+QRY
+Qry_MZFX_AdaptiveLizards_CanHaveLizardSkills((CHARACTERGUID)_Char)
+AND
+DB_MZFX_AdaptiveLizards_DialogSkill((STRING)_DialogFlag, (STRING)_Skill)
+AND
+CharacterHasSkill(_Char, _Skill, 1)
+THEN
+DB_NOOP(1);
+
+QRY
+Qry_MZFX_AdaptiveLizards_CanHaveLizardSkill((CHARACTERGUID)_Char)
+THEN
+DB_NOOP(1);
+
+// Catch all 
+
+IF
+CharacterStatusApplied(_Char, _Status, _)
+AND
+GetStatusType(_Status, "POLYMORPHED")
+AND
+Qry_MZFX_AdaptiveLizards_CanHaveLizardSkillAndSkills(_Char)
+THEN
+ObjectSetFlag(_Char, "MZFX_AdaptiveLizards_CanHaveLizardSkills");
+
+IF
+CharacterStatusApplied(_Char, _Status, _)
+AND
+GetStatusType(_Status, "POLYMORPHED")
+AND
+NOT Qry_MZFX_AdaptiveLizards_CanHaveLizardSkillAndSkills(_Char)
+THEN
+ObjectClearFlag(_Char, "MZFX_AdaptiveLizards_CanHaveLizardSkills");
+
+// Helper
+
+QRY
+Qry_MZFX_AdaptiveLizards_CanHaveLizardSkillAndSkills((CHARACTERGUID)_Char)
+AND
+Qry_MZFX_AdaptiveLizards_CanHaveLizardSkill(_Char)
+AND
+Qry_MZFX_AdaptiveLizards_CanHaveLizardSkills(_Char)
+THEN
+DB_NOOP(1);
 
 // Give the characters the book
 
@@ -27,18 +120,22 @@ IsGameLevel(_Region, 1)
 AND
 DB_IsPlayer(_Char)
 AND
-ItemTemplateIsInCharacterInventory(_Char, "BOOK_BOO_BookOfOrigins_26a03372-4c59-4903-8c63-3318fdaaccf3", 0)
+DB_BOO_Book(_Book)
+AND
+ItemTemplateIsInCharacterInventory(_Char, _Book, 0)
 THEN
-ItemTemplateAddTo("BOOK_BOO_BookOfOrigins_26a03372-4c59-4903-8c63-3318fdaaccf3", _Char, 1);
+ItemTemplateAddTo(_Book, _Char, 1);
 
 IF
 CharacterJoinedParty(_Char)
 AND
 DB_IsPlayer(_Char)
 AND
-ItemTemplateIsInCharacterInventory(_Char, "BOOK_BOO_BookOfOrigins_26a03372-4c59-4903-8c63-3318fdaaccf3", 0)
+DB_BOO_Book(_Book)
+AND
+ItemTemplateIsInCharacterInventory(_Char, _Book, 0)
 THEN
-ItemTemplateAddTo("BOOK_BOO_BookOfOrigins_26a03372-4c59-4903-8c63-3318fdaaccf3", _Char, 1);
+ItemTemplateAddTo(_Book, _Char, 1);
 
 // Using book
 
@@ -47,13 +144,63 @@ CharacterUsedItem(_Char, _Item)
 AND
 DB_IsPlayer(_Char)
 AND
-GetTemplate(_Item, "BOOK_BOO_BookOfOrigins_26a03372-4c59-4903-8c63-3318fdaaccf3")
+DB_BOO_Book(_Book)
+AND
+GetTemplate(_Item, _Book)
 AND
 QRY_SpeakerIsAvailable(_Char)
 THEN
 Proc_StartDialog(0, "BOO_BookOfOrigins_Dialog", _Char);
 
-// 
+// Mask of the Shapeshifter fixes
+
+IF
+CharacterStatusAttempt(_Char, _Status, _)
+AND
+GetStatusType(_Status, "POLYMORPHED")
+THEN
+BOO_RemoveRacialSkills(_Char);
+BOO_RemoveRacialCivils(_Char);
+BOO_RemoveRacialAbilities(_Char);
+
+IF
+CharacterStatusRemoved(_Char, _Status, _)
+AND
+GetStatusType(_Status, "POLYMORPHED")
+THEN
+ProcObjectTimer(_Char, "BOO_PolymorphReset", 200);
+
+PROC
+ProcObjectTimerFinished((CHARACTERGUID)_Char, "BOO_PolymorphReset")
+AND
+NOT QryIsPolymorphing(_Char) // Not going from one poly form to another
+AND
+DB_BOO_RacialSkillsMap(_Char, _Skill)
+THEN
+BOO_RemoveRacialSkills(_Char);
+CharacterAddSkill(_Char, _Skill, 0);
+
+PROC
+ProcObjectTimerFinished((CHARACTERGUID)_Char, "BOO_PolymorphReset")
+AND
+NOT QryIsPolymorphing(_Char) // Not going from one poly form to another
+AND
+DB_BOO_RacialCivilsMap(_Char, _Civil)
+THEN
+BOO_RemoveRacialCivils(_Char);
+CharacterAddTalent(_Char, _Civil);
+
+PROC
+ProcObjectTimerFinished((CHARACTERGUID)_Char, "BOO_PolymorphReset")
+AND
+NOT QryIsPolymorphing(_Char) // Not going from one poly form to another
+AND
+DB_BOO_RacialAbilitiesMap(_Char, _Ability)
+THEN
+BOO_RemoveRacialAbilities(_Char);
+CharacterAddTalent(_Char, _Ability);
+
+// Removal functions
 
 PROC
 BOO_RemoveOriginSkills((CHARACTERGUID)_Char)
@@ -69,94 +216,119 @@ DB_BOO_RacialSkills(_Skill)
 THEN
 CharacterRemoveSkill(_Char, _Skill);
 
-// Change the Origin skills
+PROC
+BOO_RemoveRacialCivils((CHARACTERGUID)_Char)
+AND
+DB_BOO_RacialCivils(_Civil)
+THEN
+CharacterRemoveTalent(_Char, _Civil);
+CharacterAddCivilAbilityPoint(_Char, 0);
+
+PROC
+BOO_RemoveRacialAbilities((CHARACTERGUID)_Char)
+AND
+DB_BOO_RacialAbilities(_Ability)
+THEN
+CharacterRemoveTalent(_Char, _Ability);
+CharacterAddCivilAbilityPoint(_Char, 0);
+
+// Corpse eating actually requires Elf
+// Unable to remove Elf from elves...
 
 IF
-ObjectFlagSet("BOO_BookOfOrigins_DomeOfProtection", (CHARACTERGUID)_Char, _)
+CanUseItem((CHARACTERGUID)_Char, (ITEMGUID)_Item, _)
+AND
+IsTagged(_Item, "BODYPART", 1)
+AND
+CharacterHasTalent(_Char, "Elf_CorpseEating", 1)
+AND
+IsTagged(_Char, "ELF", 0)
+THEN
+SetTag(_Char, "ELF");
+ProcObjectTimer(_Char, "BOO_CorpseEatingRemoveElf", 200);
+
+PROC
+ProcObjectTimerFinished((CHARACTERGUID)_Char, "BOO_CorpseEatingRemoveElf")
+THEN
+ClearTag(_Char, "ELF");
+
+// Overload of DialogHandler to handle all flags
+
+PROC
+BOO_DialogHandler((CHARACTERGUID)_Char, "OriginSkill", (STRING)_Skill)
 THEN
 BOO_RemoveOriginSkills(_Char);
-CharacterAddSkill(_Char, "Dome_CircleOfProtection", 0);
-ObjectClearFlag(_Char, "BOO_BookOfOrigins_DomeOfProtection");
+CharacterAddSkill(_Char, _Skill, 0);
 
-IF
-ObjectFlagSet("BOO_BookOfOrigins_BreakTheShackles", (CHARACTERGUID)_Char, _)
+// Racial skills
+PROC
+BOO_DialogHandler((CHARACTERGUID)_Char, "RacialSkill", (STRING)_Skill)
+AND
+DB_BOO_RacialSkillsMap(_Char, _Skill)
 THEN
-BOO_RemoveOriginSkills(_Char);
-CharacterAddSkill(_Char, "Shout_BreakTheShackles", 0);
-ObjectClearFlag(_Char, "BOO_BookOfOrigins_BreakTheShackles");
+NOT DB_BOO_RacialSkillsMap(_Char, _Skill);
 
-IF
-ObjectFlagSet("BOO_BookOfOrigins_TimeWarp", (CHARACTERGUID)_Char, _)
-THEN
-BOO_RemoveOriginSkills(_Char);
-CharacterAddSkill(_Char, "Target_TimeWarp", 0);
-ObjectClearFlag(_Char, "BOO_BookOfOrigins_TimeWarp");
-
-IF
-ObjectFlagSet("BOO_BookOfOrigins_BlindingSquall", (CHARACTERGUID)_Char, _)
-THEN
-BOO_RemoveOriginSkills(_Char);
-CharacterAddSkill(_Char, "Target_Squall", 0);
-ObjectClearFlag(_Char, "BOO_BookOfOrigins_BlindingSquall");
-
-IF
-ObjectFlagSet("BOO_BookOfOrigins_MaddeningSong", (CHARACTERGUID)_Char, _)
-THEN
-BOO_RemoveOriginSkills(_Char);
-CharacterAddSkill(_Char, "Target_MaddeningSong", 0);
-ObjectClearFlag(_Char, "BOO_BookOfOrigins_MaddeningSong");
-
-IF
-ObjectFlagSet("BOO_BookOfOrigins_DemonicStare", (CHARACTERGUID)_Char, _)
-THEN
-BOO_RemoveOriginSkills(_Char);
-CharacterAddSkill(_Char, "Target_DemonicStare", 0);
-ObjectClearFlag(_Char, "BOO_BookOfOrigins_DemonicStare");
-
-IF
-ObjectFlagSet("BOO_BookOfOrigins_SoulWolf", (CHARACTERGUID)_Char, _)
-THEN
-BOO_RemoveOriginSkills(_Char);
-CharacterAddSkill(_Char, "Summon_SoulWolf", 0);
-ObjectClearFlag(_Char, "BOO_BookOfOrigins_SoulWolf");
-
-// Change racial skills
-
-IF
-ObjectFlagSet("BOO_BookOfOrigins_FleshSacrifice", (CHARACTERGUID)_Char, _)
+PROC
+BOO_DialogHandler((CHARACTERGUID)_Char, "RacialSkill", (STRING)_Skill)
 THEN
 BOO_RemoveRacialSkills(_Char);
-CharacterAddSkill(_Char, "Shout_FleshSacrifice", 0);
-ObjectClearFlag(_Char, "BOO_BookOfOrigins_FleshSacrifice");
+CharacterAddSkill(_Char, _Skill, 0);
+DB_BOO_RacialSkillsMap(_Char, _Skill);
+
+// Racial civils
+PROC
+BOO_DialogHandler((CHARACTERGUID)_Char, "RacialCivil", (STRING)_Talent)
+AND
+DB_BOO_RacialCivilsMap(_Char, _Talent)
+THEN
+NOT DB_BOO_RacialCivilsMap(_Char, _Talent);
+
+PROC
+BOO_DialogHandler((CHARACTERGUID)_Char, "RacialCivil", (STRING)_Talent)
+THEN
+BOO_RemoveRacialCivils(_Char);
+CharacterAddTalent(_Char, _Talent);
+DB_BOO_RacialCivilsMap(_Char, _Talent);
+
+// Racial abilities
+PROC
+BOO_DialogHandler((CHARACTERGUID)_Char, "RacialAbility", (STRING)_Talent)
+AND
+DB_BOO_RacialAbilitiesMap(_Char, _Talent)
+THEN
+NOT DB_BOO_RacialAbilitiesMap(_Char, _Talent);
+
+PROC
+BOO_DialogHandler((CHARACTERGUID)_Char, "RacialAbility", (STRING)_Talent)
+THEN
+BOO_RemoveRacialAbilities(_Char);
+CharacterAddTalent(_Char, _Talent);
+DB_BOO_RacialAbilitiesMap(_Char, _Talent);
+
+// Deal with the flags from dialog
 
 IF
-ObjectFlagSet("BOO_BookOfOrigins_Encourage", (CHARACTERGUID)_Char, _)
+ObjectFlagSet(_FlagName, (CHARACTERGUID)_Char, _)
+AND
+DB_BOO_Flags(_FlagName, _Task, _Thing)
 THEN
-BOO_RemoveRacialSkills(_Char);
-CharacterAddSkill(_Char, "Shout_InspireStart", 0);
-ObjectClearFlag(_Char, "BOO_BookOfOrigins_Encourage");
+ObjectClearFlag(_Char, _FlagName);
+BOO_DialogHandler(_Char, _Task, _Thing);
+
+// Compatibility with RRBC
+IF
+GameStarted(_, _)
+AND
+SysIsActive("RRBC_Refund")
+THEN
+GlobalSetFlag("RRBC_Active");
 
 IF
-ObjectFlagSet("BOO_BookOfOrigins_DragonsBlaze", (CHARACTERGUID)_Char, _)
+GameStarted(_, _)
+AND
+NOT SysIsActive("RRBC_Refund")
 THEN
-BOO_RemoveRacialSkills(_Char);
-CharacterAddSkill(_Char, "Cone_Flamebreath", 0);
-ObjectClearFlag(_Char, "BOO_BookOfOrigins_DragonsBlaze");
-
-IF
-ObjectFlagSet("BOO_BookOfOrigins_PetrifyingTouch", (CHARACTERGUID)_Char, _)
-THEN
-BOO_RemoveRacialSkills(_Char);
-CharacterAddSkill(_Char, "Target_PetrifyingTouch", 0);
-ObjectClearFlag(_Char, "BOO_BookOfOrigins_PetrifyingTouch");
-
-IF
-ObjectFlagSet("BOO_BookOfOrigins_PlayDead", (CHARACTERGUID)_Char, _)
-THEN
-BOO_RemoveRacialSkills(_Char);
-CharacterAddSkill(_Char, "Shout_PlayDead", 0);
-ObjectClearFlag(_Char, "BOO_BookOfOrigins_PlayDead");
-
+GlobalClearFlag("RRBC_Active");
 
 EXITSECTION
 

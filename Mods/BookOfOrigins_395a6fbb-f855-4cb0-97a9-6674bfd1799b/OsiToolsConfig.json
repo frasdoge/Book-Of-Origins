@@ -1,0 +1,7 @@
+{
+    "RequiredExtensionVersion": 48,
+    "ModTable": "BOO",
+    "FeatureFlags": [
+        "Lua"
+    ]
+}
