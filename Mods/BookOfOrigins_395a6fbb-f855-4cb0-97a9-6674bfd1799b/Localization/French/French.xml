@@ -1,35 +1,35 @@
 <contentList>
-	<content contentuid="h260fdb55g52f3g40cbg8784g82be116bd64c" Source="BOO_BookOfOrigins_Dialog.lsj">You now recall your heritage. You are of...</content>
-	<content contentuid="he4237418g0591g4fe3ga5b3gc3f43c2349b5" Source="BOO_BookOfOrigins_Dialog.lsj">Persuading those around you. &lt;i&gt;(Spellsong)&lt;/i&gt;</content>
-	<content contentuid="h46c8c094g4917g44b2ga505g7252c4be5487" Source="BOO_BookOfOrigins_Dialog.lsj">Hmm. You seem to have forgotten your heritage.</content>
-	<content contentuid="h6d6ba4f0gbaecg4dc2g8c0ag296892624e8a" Source="BOO_BookOfOrigins_Dialog.lsj">You suddenly remember your origins. You were...</content>
-	<content contentuid="h198680a3gebf0g470fgbd7dg091b1ed916f4" Source="BOO_BookOfOrigins_Dialog.lsj">Spotting a bargain. &lt;i&gt;(Thrifty)&lt;/i&gt;</content>
-	<content contentuid="h2d99979bgab25g414bg9f2cg9cb3cb57d1e4" Source="BOO_BookOfOrigins_Dialog.lsj">Human descent. &lt;i&gt;(Encourage)&lt;/i&gt;</content>
-	<content contentuid="hf79ce5f5gb5c6g40d7gbed5g6eb80dd87957" Source="BOO_BookOfOrigins_Dialog.lsj">Recovering memories from flesh. &lt;i&gt;(Corpse Eater)&lt;/i&gt;</content>
-	<content contentuid="hbd76d0bfg5669g4d09g802cgaba0b159e063" Source="BOO_BookOfOrigins_Dialog.lsj">Lizard-kin descent.&lt;i&gt; (Dragon&apos;s Blaze)&lt;/i&gt;</content>
-	<content contentuid="h397a567dgcfc6g436egb674gcf47e1577bea" Source="BOO_BookOfOrigins_Dialog.lsj">Your were adept at...</content>
-	<content contentuid="h4aa937f3g5c25g4844g9805g11a9c69e7e19" Source="BOO_BookOfOrigins_Dialog.lsj">Hmm. You've forgotten.</content>
+	<content contentuid="h6d6ba4f0gbaecg4dc2g8c0ag296892624e8a" Source="BOO_BookOfOrigins_Dialog.lsj">Soudainement vous vous rappelez vos origines, vous étiez...</content>
+	<content contentuid="hb04fdbf3g44c1g407cga293g428693905000" Source="BOO_BookOfOrigins_Dialog.lsj">Un defenseur du faible. &lt;i&gt;(Dôme de protection)&lt;/i&gt;</content>
+	<content contentuid="h6c023c14gac2fg4320gb7c5g2828cd67da55" Source="BOO_BookOfOrigins_Dialog.lsj">Un bard avec une voix de démon. &lt;i&gt;(Maddening Song)&lt;/i&gt;</content>	
+	<content contentuid="h53229adbg0b88g4890g8bdega3050787337b" Source="BOO_BookOfOrigins_Dialog.lsj">A great presence in the storm. &lt;i&gt;(Blinding Squall)&lt;/i&gt;</content>	
 	<content contentuid="hcbf794f0g8b24g4b9eg84ccgec63997e03f0" Source="BOO_BookOfOrigins_Dialog.lsj">A master of manipulating time. &lt;i&gt;(Time Warp)&lt;/i&gt;</content>
-	<content contentuid="hde23477dg6beeg4555ga216g4cec678e35fe" Source="BOO_BookOfOrigins_Dialog.lsj">A master of a great wolf. &lt;i&gt;(Summon Soul Wolf)&lt;/i&gt;</content>
-	<content contentuid="h6c023c14gac2fg4320gb7c5g2828cd67da55" Source="BOO_BookOfOrigins_Dialog.lsj">A bard with the voice of a demon. &lt;i&gt;(Maddening Song)&lt;/i&gt;</content>
+	<content contentuid="hde23477dg6beeg4555ga216g4cec678e35fe" Source="BOO_BookOfOrigins_Dialog.lsj">A master of a great wolf. &lt;i&gt;(Invocation du loup spirituel d&apos;Ifan)&lt;/i&gt;</content>	
+	<content contentuid="h59d3c53egb9e0g4fbcgb908ge936f1adbc54" Source="BOO_BookOfOrigins_Dialog.lsj">Someone who could not be shackled. &lt;i&gt;(Break the Shackles)&lt;/i&gt;</content>	
 	<content contentuid="h6005678cg5e13g40eag8585g0106c9400661" Source="BOO_BookOfOrigins_Dialog.lsj">Someone with the piercing eyes of a demon. &lt;i&gt;(Demonic Stare)&lt;/i&gt;</content>
-	<content contentuid="hdd5dd74agb372g4d32g9276gf605c9f4d16d" Source="BOO_BookOfOrigins_Dialog.lsj">Elven descent. &lt;i&gt;(Flesh Sacrifice)&lt;/i&gt;</content>
-	<content contentuid="hffe697e4g9b02g45c0g8732gf92489e05976" Source="BOO_BookOfOrigins_Dialog.lsj">Strange descent. &lt;i&gt;(Play Dead)&lt;/i&gt;</content>
-	<content contentuid="h6fb42bd8g0c41g4c6fgad4fgdca594d4527a" Source="BOO_BookOfOrigins_Dialog.lsj">Remembering ancient lore.&lt;i&gt; (Ancestral Knowledge)&lt;/i&gt;</content>
-	<content contentuid="hfaa24153gd187g488dga56dg8b5c5aa2d51f" Source="BOO_BookOfOrigins_Dialog.lsj">Sneaking about. &lt;i&gt;(Dwarven Guile)&lt;/i&gt;</content>
-	<content contentuid="h5ab71b5cg25c1g4426ga953g91584d64120d" Source="BOO_BookOfOrigins_Dialog.lsj">Your origins and heritage have once again solidified in your mind.</content>
-	<content contentuid="h53229adbg0b88g4890g8bdega3050787337b" Source="BOO_BookOfOrigins_Dialog.lsj">A great presence in the storm. &lt;i&gt;(Blinding Squall)&lt;/i&gt;</content>
-	<content contentuid="h5e9ca7e6g8e79g470fg9fb0g48c9282a1ca4" Source="BOO_BookOfOrigins_Dialog.lsj">Striking targets at their weaknesses. &lt;i&gt;(Ingenious)&lt;/i&gt;</content>
 	<content contentuid="h02a2d549ge626g4fc9g8290g20318d145a6c" Source="BOO_BookOfOrigins_Dialog.lsj">Hmm. You&apos;ve forgotten your origins actually.</content>
-	<content contentuid="h121b9919g0641g40c4g87cag6063dfec781b" Source="BOO_BookOfOrigins_Dialog.lsj">Taking a beating. &lt;i&gt;(Sturdy)&lt;/i&gt;</content>
+	<content contentuid="h260fdb55g52f3g40cbg8784g82be116bd64c" Source="BOO_BookOfOrigins_Dialog.lsj">Vous vous souvenez de votre héritage. Vous êtes d&apos;...</content>
+	<content contentuid="hdd5dd74agb372g4d32g9276gf605c9f4d16d" Source="BOO_BookOfOrigins_Dialog.lsj">Elven descent. &lt;i&gt;(Sacrifice de chair)&lt;/i&gt;</content>
+	<content contentuid="h2d99979bgab25g414bg9f2cg9cb3cb57d1e4" Source="BOO_BookOfOrigins_Dialog.lsj">Asendance humaine. &lt;i&gt;(Encouragement)&lt;/i&gt;</content>
+	<content contentuid="hbd76d0bfg5669g4d09g802cgaba0b159e063" Source="BOO_BookOfOrigins_Dialog.lsj">Asendance lezarde.&lt;i&gt; (Flamme de dragon)&lt;/i&gt;</content>
+	<content contentuid="h69bc41c7ga800g4d1fgb20bg23ba44d44b64" Source="BOO_BookOfOrigins_Dialog.lsj">Asendance naine. &lt;i&gt;(Toucher pétrifiant)&lt;/i&gt;</content>	
+	<content contentuid="hffe697e4g9b02g45c0g8732gf92489e05976" Source="BOO_BookOfOrigins_Dialog.lsj">Asendance mystérieuse. &lt;i&gt;(Play Dead)&lt;/i&gt;</content>
+	<content contentuid="h46c8c094g4917g44b2ga505g7252c4be5487" Source="BOO_BookOfOrigins_Dialog.lsj">Hum. Vous semblez avoir oubliez votre héritage</content>	
 	<content contentuid="hd92c9993ge50ag4e70gb818gdf0e4d6d1027" Source="BOO_BookOfOrigins_Dialog.lsj">Your innate talent included...</content>
-	<content contentuid="hce89b3a5g9743g4180ga810gc7430cd9f290" Source="BOO_BookOfOrigins_Dialog.lsj">Hmm. You can&apos;t remember.</content>
+	<content contentuid="hf79ce5f5gb5c6g40d7gbed5g6eb80dd87957" Source="BOO_BookOfOrigins_Dialog.lsj">Recovering memories from flesh. &lt;i&gt;(Mangeur de cadavres)&lt;/i&gt;</content>	
+	<content contentuid="h5e9ca7e6g8e79g470fg9fb0g48c9282a1ca4" Source="BOO_BookOfOrigins_Dialog.lsj">Striking targets at their weaknesses. &lt;i&gt;(Ingenious)&lt;/i&gt;</content>	
 	<content contentuid="hbac57b62g4807g4666g98cag83565fc7fec3" Source="BOO_BookOfOrigins_Dialog.lsj">Walking off certain elements. &lt;i&gt;(Sophisticated)&lt;/i&gt;</content>
-	<content contentuid="hb04fdbf3g44c1g407cga293g428693905000" Source="BOO_BookOfOrigins_Dialog.lsj">A defender of the weak. &lt;i&gt;(Dome of Protection)&lt;/i&gt;</content>
-	<content contentuid="h69bc41c7ga800g4d1fgb20bg23ba44d44b64" Source="BOO_BookOfOrigins_Dialog.lsj">Dwarven descent. &lt;i&gt;(Petrifying Touch)&lt;/i&gt;</content>
-	<content contentuid="h59d3c53egb9e0g4fbcgb908ge936f1adbc54" Source="BOO_BookOfOrigins_Dialog.lsj">Someone who could not be shackled. &lt;i&gt;(Break the Shackles)&lt;/i&gt;</content>
-	<content contentuid="h0380055dg8534g46ecga09fgbe08c34aaff7" Source="BOOK_BOO_BookOfOrigins">A tome with mystical properties. Those who read it seem to remember their past quite vividly.</content>
-	<content contentuid="hb258be75g3f36g47eega17ege37bb46a7b7a" Source="BOOK_BOO_BookOfOrigins">Book of Origins</content>
-	<content contentuid="h2588ce8bgd9abg4a99ga06fga29cc4ccd53c" Source="BOOK_BOO_BookOfOrigins">Read</content>
-	<content contentuid="he269210dg8d16g4f1dg93e4g82940cfd66a9" Source="Summon_DisplayName.lsb" Key="Summon_SoulWolf_DisplayName">Summon Soul Wolf</content>
+	<content contentuid="h121b9919g0641g40c4g87cag6063dfec781b" Source="BOO_BookOfOrigins_Dialog.lsj">Taking a beating. &lt;i&gt;(Sturdy)&lt;/i&gt;</content>	
+	<content contentuid="hce89b3a5g9743g4180ga810gc7430cd9f290" Source="BOO_BookOfOrigins_Dialog.lsj">Hmm. You can&apos;t remember.</content>	
+	<content contentuid="h397a567dgcfc6g436egb674gcf47e1577bea" Source="BOO_BookOfOrigins_Dialog.lsj">Your were adept at...</content>
+	<content contentuid="h6fb42bd8g0c41g4c6fgad4fgdca594d4527a" Source="BOO_BookOfOrigins_Dialog.lsj">Se souvient des histoires du passée.&lt;i&gt; (Savoir ancestral)&lt;/i&gt;</content>
+	<content contentuid="h198680a3gebf0g470fgbd7dg091b1ed916f4" Source="BOO_BookOfOrigins_Dialog.lsj">un fin marchand. &lt;i&gt;(Econome)&lt;/i&gt;</content>
+	<content contentuid="he4237418g0591g4fe3ga5b3gc3f43c2349b5" Source="BOO_BookOfOrigins_Dialog.lsj">Persuading those around you. &lt;i&gt;(Spellsong)&lt;/i&gt;</content>	
+	<content contentuid="hfaa24153gd187g488dga56dg8b5c5aa2d51f" Source="BOO_BookOfOrigins_Dialog.lsj">Sneaking about. &lt;i&gt;(Dwarven Guile)&lt;/i&gt;</content>
+	<content contentuid="h4aa937f3g5c25g4844g9805g11a9c69e7e19" Source="BOO_BookOfOrigins_Dialog.lsj">Hmm. You've forgotten.</content>
+	<content contentuid="h5ab71b5cg25c1g4426ga953g91584d64120d" Source="BOO_BookOfOrigins_Dialog.lsj">Your origins and heritage have once again solidified in your mind.</content>
+	<content contentuid="h0380055dg8534g46ecga09fgbe08c34aaff7" Source="BOOK_BOO_BookOfOrigins">Un tome aux propriété mystiques. Ceux qui le lisent semblent se souvenir très bien de leur passé.</content>
+	<content contentuid="hb258be75g3f36g47eega17ege37bb46a7b7a" Source="BOOK_BOO_BookOfOrigins">Livre des origines</content>
+	<content contentuid="h2588ce8bgd9abg4a99ga06fga29cc4ccd53c" Source="BOOK_BOO_BookOfOrigins">Lire</content>
+	<content contentuid="he269210dg8d16g4f1dg93e4g82940cfd66a9" Source="Summon_DisplayName.lsb" Key="Summon_SoulWolf_DisplayName"Invocation du loup spirituel d&apos;Ifan</content>
 </contentList>
