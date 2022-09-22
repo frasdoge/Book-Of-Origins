@@ -11,6 +11,8 @@ Choose your origin and racial skills, as well as the talents particular to a rac
 * Chinese (Simplified & Traditional)
 * Korean
 * German
+* French
+* Russian
 
 # Releases
 * [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=2020334615)
