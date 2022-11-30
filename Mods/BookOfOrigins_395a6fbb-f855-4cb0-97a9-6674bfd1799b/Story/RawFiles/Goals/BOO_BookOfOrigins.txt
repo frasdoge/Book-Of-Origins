@@ -26,6 +26,12 @@ DB_BOO_RacialAbilities("Elf_CorpseEating"    );
 DB_BOO_RacialAbilities("Dwarf_Sturdy"        );
 DB_BOO_RacialAbilities("Human_Inventive"     );
 
+DB_BOO_MaskSkills("Shout_PolymorphIntoHuman");
+DB_BOO_MaskSkills("Shout_PolymorphIntoLizard");
+DB_BOO_MaskSkills("Shout_PolymorphIntoElf");
+DB_BOO_MaskSkills("Shout_PolymorphIntoDwarf");
+DB_BOO_MaskCancel("Shout_CancelPolymorphism");
+
 DB_BOO_Flags("BOO_BookOfOrigins_DomeOfProtection"  , "OriginSkill"  , "Dome_CircleOfProtection");
 DB_BOO_Flags("BOO_BookOfOrigins_MaddeningSong"     , "OriginSkill"  , "Target_MaddeningSong"   );
 DB_BOO_Flags("BOO_BookOfOrigins_BlindingSquall"    , "OriginSkill"  , "Target_Squall"          );
@@ -155,19 +161,39 @@ Proc_StartDialog(0, "BOO_BookOfOrigins_Dialog", _Char);
 // Mask of the Shapeshifter fixes
 
 IF
+CharacterUsedSkill(_Char, _Skill, _, _)
+AND
+DB_BOO_MaskSkills(_Skill)
+THEN
+DB_BOO_ActiveMaskSkill(_Char, _Skill);
+
+IF
 CharacterStatusAttempt(_Char, _Status, _)
 AND
 GetStatusType(_Status, "POLYMORPHED")
+AND
+DB_BOO_ActiveMaskSkill(_Char, _Skill)
 THEN
 BOO_RemoveRacialSkills(_Char);
 BOO_RemoveRacialCivils(_Char);
 BOO_RemoveRacialAbilities(_Char);
+NOT DB_BOO_ActiveMaskSkill(_Char, _Skill);
+
+IF
+CharacterUsedSkill(_Char, _Skill, _, _)
+AND
+DB_BOO_MaskCancel(_Skill)
+THEN
+DB_BOO_CancelMaskSkill(_Char, _Skill);
 
 IF
 CharacterStatusRemoved(_Char, _Status, _)
 AND
 GetStatusType(_Status, "POLYMORPHED")
+AND
+DB_BOO_CancelMaskSkill(_Char, _Skill)
 THEN
+NOT DB_BOO_CancelMaskSkill(_Char, _Skill);
 ProcObjectTimer(_Char, "BOO_PolymorphReset", 200);
 
 PROC
